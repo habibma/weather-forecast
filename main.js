@@ -46,7 +46,7 @@ $(document).ready(function () {
   // To fetch weather data based on city's latitude and longitude when the user click on the the citys name list
   const dataRequst = async (object) => {
     try {
-      const response = await fetch(`http://www.7timer.info/bin/api.pl?lon=${object.longitude}&lat=${object.latitude}&product=civillight&output=json`);
+      const response = await fetch(`https://www.7timer.info/bin/api.pl?lon=${object.longitude}&lat=${object.latitude}&product=civillight&output=json`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
