@@ -59,7 +59,7 @@ $(document).ready(function () {
 
       // Display weather information alongside the city name
       currentWeather.forEach(day => {
-        $("#days").append(`<article class="card" style="width: 8rem;">
+        $("#days").append(`<article class="card mb-3" style="width: 8rem;">
                         <div class="text-center my-2">
                           <date>${numberToDate(day.date)}</date>
                         </div>
@@ -94,13 +94,12 @@ $(document).ready(function () {
 
     //To show data after 1 second
     const selectedCity = germanCities.find(city => city.name === $(this).text());
+    $('#select-btn').text(selectedCity.name) //show the name on button
     setTimeout(() => {
       dataRequst(selectedCity);
     }, 1000)
 
   });
-
-
 });
 
 
